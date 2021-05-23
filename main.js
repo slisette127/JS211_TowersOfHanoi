@@ -1,6 +1,7 @@
 'use strict';
 
 const assert = require('assert');
+const { prototype } = require('events');
 const readline = require('readline');
 const rl = readline.createInterface({
   input: process.stdin,
@@ -29,23 +30,42 @@ const printStacks = () => {
   console.log("c: " + stacks.c);
 }
 
+// Before you move, should you check if the move it actually allowed? Should 3 be able to be stacked on 2
+const isLegal = () => {
+  // Your code here
+
+
+}
+
 // Next, what do you think this function should do?
 const movePiece = () => {
   // Your code here
 
 }
 
-// Before you move, should you check if the move it actually allowed? Should 3 be able to be stacked on 2
-const isLegal = () => {
-  // Your code here
-
-}
 
 // What is a win in Towers of Hanoi? When should this function run?
+let winningStacks = {
+  a: [],
+  b: [],
+  c: [4, 3, 2, 1]
+};
+
+
 const checkForWin = () => {
   // Your code here
+  //.legth to check if the variable stacks equals the new variable with the winning line. 
+//checks if line C has the array [4,3,2,1], it will return true. It should say "you win." 
+//Else return false and no message.
+  if (stacks.length !== winningStacks.lenth) return false;
+  // Check if the arrays are the same length
 
-}
+  	// Check if all items exist and are in the same order
+  for (var i = 0; i < stacks.length; i++) {
+    if (stacks[i] !== winningStacks[i]) return false;
+  }
+  return true;
+};
 
 // When is this function called? What should it do with its argument?
 const towersOfHanoi = (startStack, endStack) => {
