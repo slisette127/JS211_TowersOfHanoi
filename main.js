@@ -39,12 +39,23 @@ const isLegal = (startStack, endStack) => {
   //if starting stack is greater than one, saying that there is something there, and the ending position will be open for anything.
    } else return false;
 };
+//cannot put a bigger block on a smaller block. function needs to check where you're moving your piece. 
+//we need parameters of startstack and endStack.
+//If the endStack's length is 0
+  // return True
+
+//If the endStack length is not 0
+  //Get last element of ending stack [arr.length-1], pop???
+  //if the last item in endStack is less than startStack item to move 
+    //return false
+  //else , return true
 
 // Next, what do you think this function should do?
 const movePiece = (startStack, endStack) => {
   // Your code here
   let x = stacks[startStack].pop();
   stacks[endStack].push(x);
+  
 
 };
 
@@ -72,8 +83,10 @@ const checkForWin = () => {
 
 // When is this function called? What should it do with its argument?
 const towersOfHanoi = (startStack, endStack) => {
+  movePiece(startStack, endStack)
   // Your code here
  checkForWin()
+ //CODE PLAN:
 //if statement to check if the move isLegal. use isLegal and pass in start stack and end stack.
 //if the statement is true it'll move the piece. console.log invalid move = else statement.
 }
