@@ -93,9 +93,12 @@ const towersOfHanoi = (startStack, endStack) => {
  checkForWin()
 
  if (startStack, endStack) {
-    stacks.
+    
  
 //if statement to check if the move isLegal. use isLegal and pass in start stack and end stack.
+const isLegal(startStack, endStack) => {
+  
+}
 //if the statement is true it'll move the piece. console.log invalid move = else statement.
  }
 
